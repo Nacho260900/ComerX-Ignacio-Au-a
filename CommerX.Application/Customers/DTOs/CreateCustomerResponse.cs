@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace CommerX.Application.Customers.DTOs
 {
-    internal class CreateCustomerResponse
+    public class CreateCustomerResponse
     {
+        //identificar unico generado por el sistema
+        public required Guid CustomerID { get; init; }
     }
 }
