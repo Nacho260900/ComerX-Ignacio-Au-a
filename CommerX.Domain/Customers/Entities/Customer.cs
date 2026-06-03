@@ -42,4 +42,18 @@ public sealed class Customer : BaseEntity
 
     public void UpdateAddress(string newAddress)
         => Address = Address.Create(newAddress);
+
+    public void UpdatePhone(string newPhone)
+        => Phone = Phone.Create(newPhone);
+
+    public void UpdateBirthDate(DateOnly newBirthDate)
+        => BirthDate = BirthDate.Create(newBirthDate);
+
+    public void Update(string email, string phone, string address, DateOnly birthDate)
+    {
+        Email = EmailAddress.Create(email);
+        Phone = Phone.Create(phone);
+        Address = Address.Create(address);
+        BirthDate = BirthDate.Create(birthDate);
+    }
 }

@@ -9,6 +9,7 @@ namespace CommerX.Application.Customers.Ports
 {
     public interface ICreateCustomerOutputPort
     {
+        CreateCustomerResponse Response { get; }
         //el cliente fue creado exitosamente
         Task HandleSuccessAsync(CreateCustomerResponse response);
         //ya existe un cliente con el mismo documento - regla de unicidad violada
